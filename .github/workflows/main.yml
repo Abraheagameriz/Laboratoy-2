@@ -1,0 +1,90 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+      float n1=0,n2=0,n3=0,n4=0,n5=0,n6=0,n7=0,n8=0,n9=0,n10=0,n11=0,n12=0,n13=0,n14=0,p1=0,p2=0,p3=0,p4=0,p5=0,p6=0;
+        p1=Float.parseFloat(no.getText());
+        p2=Float.parseFloat(al1.getText());
+        p3=Float.parseFloat(al2.getText());
+        p4=Float.parseFloat(bon.getText());
+        p5=Float.parseFloat(com.getText());
+        p6=Float.parseFloat(otsueldos.getText());
+       
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        n1=(p1);
+        n2=(p2);
+        n3=(p3);
+        n4=(p4);
+        n5=(p6);
+        n6=(n2+n3+p4+p6);
+        n7=(float) ((n6)*04.83);
+        n8=(float) (n6*0.05);
+        n9=(float) ((n6)*0.03);
+        n10=(float)(n6*0.05);
+        n11=(float) ((n6)*0.5);
+        n12=n7+n8+n9+n10+n11;
+        n13=n6-n12;
+        
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        DefaultTableModel modelo = (DefaultTableModel)
+        tbDatos.getModel();
+        Object[] fila=new Object[17];
+        fila[0]=String.valueOf(n1);
+        fila[1]=nom.getText();
+        fila[2]=pst.getText();
+        fila[3]=String.valueOf(n2);
+        fila[4]=String.valueOf(n3);
+        fila[5]=String.valueOf(n4);
+        fila[6]=String.valueOf(n5);
+        fila[7]=String.valueOf(n6);
+        fila[8]=String.valueOf(n7);
+        fila[9]=String.valueOf(n8);
+        fila[10]=String.valueOf(n9);
+        fila[11]=String.valueOf(n10);
+        fila[12]=String.valueOf(n11);
+        fila[13]=String.valueOf(n12);
+        fila[14]=String.valueOf(n13);
+        modelo.addRow(fila);
+        tbDatos.setModel(modelo);
+         d14.setText(String.valueOf(n14));
+         d13.setText(String.valueOf(n13));
+         s1.setText(String.valueOf(n3));
+         s2.setText(String.valueOf(n2));
+         s4.setText(String.valueOf(n4));
+         s3.setText(String.valueOf(n3));
+         s5.setText(String.valueOf(n5));
+         s6.setText(String.valueOf(n6));
+         s7.setText(String.valueOf(n10));
+          d12.setText(String.valueOf(n7));
+         d11.setText(String.valueOf(n8));
+         d10.setText(String.valueOf(n9));
+         d9.setText(String.valueOf(n11));
+         d8.setText(String.valueOf(n12));
+         
+                 DefaultTableModel model = (DefaultTableModel)
+        tbDatos.getModel();
+        int a=tbDatos.getSelectedRow();
+
+        if (a<0){
+            JOptionPane.showMessageDialog(null,"debes seleciona una fila de la tabla");
+
+        }else{
+            int confirmar=JOptionPane.showConfirmDialog(null,"Esta seguro que quiere eliminar el registro");
+            if (JOptionPane.OK_OPTION==confirmar){
+                model.removeRow(a);
+                JOptionPane.showMessageDialog(null,"registro eliminado");
+            }
+        }
